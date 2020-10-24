@@ -17,7 +17,7 @@ This program is a command line application to simulate a virtual restaurant wher
 * [Heroku Deployed Link](https://sheltered-tundra-69850.herokuapp.com/)
 * [Usage Demo Video](https://drive.google.com/file/d/1BM-I1kWwmgsridWvZu1X4i86W_KQLLN9/view)
 
-![Demo GIF](./assets/img/demo.gif)
+![Demo GIF](./public/assets/img/demo.gif)
 
 ## Installation
 To run the program I would recommend testing it from the Heroku deployed link as that makes the process much easier as it uses the JawsDB add-on for Heroku to have a hosted connection and database for the program.
@@ -43,7 +43,7 @@ npm install express
 
 ## Usage
 Initial Screen:
-![](1.png)
+![](./public/assets/img/1.png)
 
 ## Author
 * Nathan Vu
