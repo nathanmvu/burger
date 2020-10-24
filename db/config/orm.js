@@ -23,6 +23,16 @@ var orm = {
       if (err) throw err;
       cb(res);
     })
+  },
+
+  delete: (id, cb) => {
+    var burgerStr = `DELETE FROM burgers WHERE id = ?`;
+    connection.query(burgerStr, [id], function(err, res) {
+      if (err) throw err;
+      cb(res);
+      console.log(res);
+    })
+
   }
 }
 

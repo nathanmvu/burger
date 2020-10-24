@@ -1,8 +1,8 @@
 <div class="container">
   <!--Jumbotron-->
   <div class="jumbotron text-center bg-light">
-    <h1 class="display-4" id="app-title">Eat the Burger! <img src="../assets/burger-image.png"></h1>
-    <p class="lead">Welcome! Select a burger and eat it!</p>
+    <h1 class="display-4" id="app-title">Eat the Burger<img class='burgerImage' src="../assets/img/burger-image.png"></h1>
+    <p class="lead">Welcome! Add, eat, and delete some burgers!</p>
   </div>
 
   <div class='row'>
@@ -13,7 +13,7 @@
           {{#unless devoured}}
           <li>
             {{burger_name}}
-            <button class='devour-burger btn btn-success'>Devour!</button>
+            <button class='devour-burger btn btn-light' data-id="{{id}}">Devour!</button>
           </li>
           {{/unless}}
         {{/each}}
@@ -27,8 +27,7 @@
           {{#if devoured}}
             <li>
               {{burger_name}}
-              <button type="button" class="delete-burger btn btn-alert" data-id="{{this.id}}">DELETE</button>
-
+              <button type="button" class="delete-burger btn btn-light" data-id="{{this.id}}">DELETE</button>
             </li>
           {{/if}}
         {{/each}}
@@ -39,18 +38,16 @@
   <div class= "row">
   <div class="container add">
   <h3>Add a Burger</h3>
-    <form class="create-form">
+    <form class="create-form add-burger">
 
       <div class="form-group">
         <label for="burger">Burger Name:</label>
        <input type="text" id="newBurgerName" name="name">
       </div>
     
-      <button type="submit" class="add-burger btn btn-outline-info">Add Burger</button>
+      <button type="submit" class="btn btn-outline-info">Add Burger</button>
     </form>
 
     </div>
   </div>
-</div>
-
 </div>

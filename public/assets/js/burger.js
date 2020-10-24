@@ -1,11 +1,13 @@
 $(function () {
   $('.add-burger').on('submit', function(event) {
     event.preventDefault();
-
+    console.log('works');
     var newBurger = {
       burger_name: $("#newBurgerName").val().trim(),
       devoured: false
     };
+
+    console.log(newBurger);
 
     $.ajax("/api/burgers", {
       type: "POST",
@@ -24,6 +26,7 @@ $(function () {
     console.log('devoured');
     event.preventDefault();
     let id = $(this).data('id');
+    console.log(id);
 
     var newState = {
       devoured: true
@@ -43,12 +46,14 @@ $(function () {
 
   $('.delete-burger').on('click', function(event) {
     event.preventDefault();
+    let id = $(this).data('id');
+    console.log(id);
 
     $.ajax("/api/burgers/" + id, {
       type: "DELETE"
     }).then(
       function() {
-        console.log("created new burger");
+        console.log("deleted burger");
         // Reload the page to get the updated list
         location.reload();
       }
